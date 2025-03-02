@@ -4,20 +4,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ВИТА МАРКЕТ</title>
+  <title>ВИТА Маркет, здоровье начинается здесь!</title>
   <link rel="shortcut icon" href="./assets/relicon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./css/adaptive.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
+<!-- https://vita-market.netlify.app/ -->
+
 <body>
+  <menu id="side-menu">
+    <div class="menu-container">
+      <div class="nav_header">
+        <a href="#home">
+          <img class="menu_logo" src="./assets/logotype.png" alt="logotype">
+        </a>
+        <button class="close_menu" id="close-menu">
+          &#10006;
+        </button>
+      </div>
+      <div class="head_langs_menu">
+        <h1 class="lang" id="ru_translate">RU</h1>
+        <h1 class="lang" id="en_translate">EN</h1>
+      </div>
+      <div class="menu_container">
+        <ul>
+          <li>
+            <a href="#products">Продукты</a>
+          </li>
+          <li>
+            <a href="#brands">Бренды</a>
+          </li>
+          <li>
+            <a href="#about_us">О нас</a>
+          </li>
+          <li>
+            <a href="#contacts">Контакты</a>
+          </li>
+        </ul>
+        <div class="btn_contact">
+          <a href="#" class="head_contacts">Связаться с нами</a>
+        </div>
+      </div>
+    </div>
+  </menu>
   <header>
     <a href="#home">
       <img class="head_logotype" src="./assets/logotype.png" alt="logotype">
     </a>
 
-    <div class="head_container">
+    <button class="burger-menu" id="burger-menu">
+      &#9776;
+    </button>
+
+    <div class="head_container" id="nav-menu">
       <ul>
         <li>
           <a href="#products">Продукты</a>
@@ -68,21 +110,25 @@
     </section>
 
     <div class="main_bottom_content">
-      <div>
-        <img src="./assets/mark.webp" alt="mark_icon">
-        <h3>Гарантия 100% оргинальности</h3>
+      <div class="box_section_bottom">
+        <div>
+          <img src="./assets/mark.webp" alt="mark_icon">
+          <h3>Гарантия 100% оргинальности</h3>
+        </div>
+        <div>
+          <img src="./assets/mark.webp" alt="mark_icon">
+          <h3>Персональный менеджер с поддержкой 24/7</h3>
+        </div>
       </div>
-      <div>
-        <img src="./assets/mark.webp" alt="mark_icon">
-        <h3>Персональный менеджер с поддержкой 24/7</h3>
-      </div>
-      <div>
-        <img src="./assets/mark.webp" alt="mark_icon">
-        <h3>Таможенное оформление, честный знак и доставка до вашего склада из Европы и США под ключ</h3>
-      </div>
-      <div>
-        <img src="./assets/mark.webp" alt="mark_icon">
-        <h3>Официальный дистрибьютер 7 лет на рынке</h3>
+      <div class="box_section_bottom">
+        <div>
+          <img src="./assets/mark.webp" alt="mark_icon">
+          <h3>Таможенное оформление, честный знак и доставка до вашего склада из Европы и США под ключ</h3>
+        </div>
+        <div>
+          <img src="./assets/mark.webp" alt="mark_icon">
+          <h3>Официальный дистрибьютер 7 лет на рынке</h3>
+        </div>
       </div>
     </div>
   </div>
@@ -123,7 +169,7 @@
       <img src="./assets/brands/19.png" alt="brands-icon">
     </div>
 
-    <div class="about_us_content1" data-aos-duration="3000" data-aos="fade-up" id="about_us">
+    <div class="about_us_content1">
       <div class="left_content1">
         <h1>Наши преимущества</h1>
         <div class="ab_box_1">
@@ -138,7 +184,7 @@
         </div>
         <div class="ab_box_3">
           <img src="./assets/all-agree.png" alt="icon">
-          <p>Поддержка опытного партнера поможет управлять продажами на нескольких площадках, снижая риски ошибок</p>.
+          <p>Поддержка опытного партнера поможет управлять продажами на нескольких площадках, снижая риски ошибок</p>
         </div>
         <div class="ab_box_4">
           <img src="./assets/earth.png" alt="icon">
@@ -148,7 +194,7 @@
       <div class="right_content1"></div>
     </div>
 
-    <div class="slider_container" id="products" data-aos-duration="3000" data-aos="fade-up">
+    <!-- <div class="slider_container" id="products" data-aos-duration="3000" data-aos="fade-up">
       <h1>Наши продукты</h1>
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -201,13 +247,13 @@
             </div>
           </div>
         </div>
-        <!-- <div class="swiper-pagination"></div> -->
+        <div class="swiper-pagination"></div>
         <div style="color: green !important;" class="swiper-button-next"></div>
         <div style="color: green !important;" class="swiper-button-prev"></div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="about_us_content2" data-aos-duration="3000" data-aos="fade-up">
+    <div class="about_us_content2">
       <div class="left_content2">
         <h1> Мы привезем под ключ лучшие бренды витаминов и БАДов из Европы и США, поможем организовать и увеличить
           продажи</h1>
@@ -290,7 +336,7 @@
           </a>
           <a class="fProducts" href="#products">
             Продукты
-          </a>  
+          </a>
         </div>
       </div>
       <div class="second_content_footer">
@@ -302,7 +348,6 @@
 
   <script src="script.js"></script>
   <script src="utils.js"></script>
-  <script src="swiper.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
@@ -340,7 +385,7 @@
         },
       }
     })
-    AOS.init();
+    AOS.init()
   </script>
 </body>
 
