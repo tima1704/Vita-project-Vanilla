@@ -359,11 +359,11 @@
   }
 
   .btn_contact {
-    margin-top: 110px;
+    margin-top: 30px;
   }
 
   .btn_contact button {
-    width: 100%;
+    width: 50%;
   }
 }
 
@@ -923,7 +923,7 @@
   }
 
   .btn_contact {
-    margin-top: 150px;
+    margin-top: 30px;
   }
 
   header {
