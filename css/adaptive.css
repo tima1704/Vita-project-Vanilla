@@ -595,6 +595,10 @@
 
 @media (max-width: 550px) {
 
+  .menu-container .head_langs {
+    margin-top: 20px !important;
+  }
+
   .content_2 img {
     width: 250px;
     margin: 0 20px;

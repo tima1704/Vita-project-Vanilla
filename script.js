@@ -87,76 +87,65 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function setLanguage(lang) {
-    document.querySelector("ul li:nth-child(1) a").textContent = translations[lang].cooperation
-    document.querySelector("ul li:nth-child(2) a").textContent = translations[lang].brands
-    document.querySelector("ul li:nth-child(3) a").textContent = translations[lang].about
-    document.querySelector(".head_phoneNumber p").textContent = translations[lang].callCenter
-    document.querySelector(".head_contacts").textContent = translations[lang].contactUs
+    document.querySelectorAll("ul li:nth-child(1) a").forEach(el => el.textContent = translations[lang].cooperation);
+    document.querySelectorAll("ul li:nth-child(2) a").forEach(el => el.textContent = translations[lang].brands);
+    document.querySelectorAll("ul li:nth-child(3) a").forEach(el => el.textContent = translations[lang].about);
+    document.querySelectorAll(".head_phoneNumber p").forEach(el => el.textContent = translations[lang].callCenter);
+    document.querySelectorAll(".head_contacts").forEach(el => el.textContent = translations[lang].contactUs);
 
-    // Section Home
-    document.querySelector(".main_container_one h1").textContent = translations[lang].homeHeader
-    document.querySelector(".main_container_one p").textContent = translations[lang].homeSubHeader
+    document.querySelectorAll(".main_container_one h1").forEach(el => el.textContent = translations[lang].homeHeader);
+    document.querySelectorAll(".main_container_one p").forEach(el => el.textContent = translations[lang].homeSubHeader);
 
-    // Marquee 
-    const marqueeSpans = document.querySelectorAll(".marquee span")
-    marqueeSpans.forEach(span => {
-      span.textContent = translations[lang].marqueeT
-    })
+    document.querySelectorAll(".marquee span").forEach(span => span.textContent = translations[lang].marqueeT);
 
-    // Section Guarantees
-    document.querySelectorAll(".main_bottom_content div h3")[0].textContent = translations[lang].guarantee1
-    document.querySelectorAll(".main_bottom_content div h3")[1].textContent = translations[lang].guarantee2
-    document.querySelectorAll(".main_bottom_content div h3")[2].textContent = translations[lang].guarantee3
-    document.querySelectorAll(".main_bottom_content div h3")[3].textContent = translations[lang].guarantee4
+    document.querySelectorAll(".main_bottom_content div h3").forEach((el, index) => {
+      el.textContent = translations[lang][`guarantee${index + 1}`];
+    });
 
-    // Section Brands
-    document.querySelector(".title_block h1").textContent = translations[lang].brandsHeader
-    document.querySelector('.ourBrandsTitle').textContent = translations[lang].ourBrands
+    document.querySelectorAll(".title_block h1").forEach(el => el.textContent = translations[lang].brandsHeader);
+    document.querySelectorAll(".ourBrandsTitle").forEach(el => el.textContent = translations[lang].ourBrands);
 
-    // Section Products
-    document.querySelector(".slider_container h1").textContent = translations[lang].productsHeader
+    document.querySelectorAll(".slider_container h1").forEach(el => el.textContent = translations[lang].productsHeader);
+    document.querySelectorAll(".about_us_content1 h1").forEach(el => el.textContent = translations[lang].aboutUsHeader);
 
-    // Section About Us
-    document.querySelector(".about_us_content1 h1").textContent = translations[lang].aboutUsHeader
+    document.querySelectorAll(".ab_box_1 p").forEach(el => el.textContent = translations[lang].ourTxone);
+    document.querySelectorAll(".ab_box_2 p").forEach(el => el.textContent = translations[lang].ourTtwo);
+    document.querySelectorAll(".ab_box_3 p").forEach(el => el.textContent = translations[lang].ourTxThree);
+    document.querySelectorAll(".ab_box_4 p").forEach(el => el.textContent = translations[lang].ourTxFor);
 
-    document.querySelector(".ab_box_1 p").textContent = translations[lang].ourTxone
-    document.querySelector(".ab_box_2 p").textContent = translations[lang].ourTtwo
-    document.querySelector(".ab_box_3 p").textContent = translations[lang].ourTxThree
-    document.querySelector(".ab_box_4 p").textContent = translations[lang].ourTxFor
+    document.querySelectorAll(".left_content2 h1").forEach(el => el.textContent = translations[lang].aboutUs2Title);
 
+    document.querySelectorAll(".step_work_container .box_container_1 div h3").forEach((el, index) => {
+      el.textContent = translations[lang][`step${index + 1}`];
+    });
 
-    document.querySelector(".left_content2 h1").textContent = translations[lang].aboutUs2Title
-    document.querySelectorAll(".step_work_container .box_container_1 div h3")[0].textContent = translations[lang].step1
-    document.querySelectorAll(".step_work_container .box_container_1 div p")[0].textContent = translations[lang].step1Desc
-    document.querySelectorAll(".step_work_container .box_container_1 div h3")[1].textContent = translations[lang].step2
-    document.querySelectorAll(".step_work_container .box_container_1 div p")[1].textContent = translations[lang].step2Desc
-    document.querySelectorAll(".step_work_container .box_container_2 div h3")[0].textContent = translations[lang].step3
-    document.querySelectorAll(".step_work_container .box_container_2 div p")[0].textContent = translations[lang].step3Desc
-    document.querySelectorAll(".step_work_container .box_container_2 div h3")[1].textContent = translations[lang].step4
-    document.querySelectorAll(".step_work_container .box_container_2 div p")[1].textContent = translations[lang].step4Desc
+    document.querySelectorAll(".step_work_container .box_container_1 div p").forEach((el, index) => {
+      el.textContent = translations[lang][`step${index + 1}Desc`];
+    });
 
-    // FAQ Section
-    document.querySelector('.text-center').textContent = translations[lang].reapeatFAQtitle
-    document.querySelectorAll(".faq-item .faq-question h1")[0].textContent = translations[lang].faq1
-    document.querySelectorAll(".faq-item .faq-answer p")[0].textContent = translations[lang].faq1Ans
-    document.querySelectorAll(".faq-item .faq-question h1")[1].textContent = translations[lang].faq2
-    document.querySelectorAll(".faq-item .faq-answer p")[1].textContent = translations[lang].faq2Ans
-    document.querySelectorAll(".faq-item .faq-question h1")[2].textContent = translations[lang].faq3
-    document.querySelectorAll(".faq-item .faq-answer p")[2].textContent = translations[lang].faq3Ans
+    document.querySelectorAll(".text-center").forEach(el => el.textContent = translations[lang].reapeatFAQtitle);
+    document.querySelectorAll(".faq-item .faq-question h1").forEach((el, index) => {
+      el.textContent = translations[lang][`faq${index + 1}`];
+    });
+    document.querySelectorAll(".faq-item .faq-answer p").forEach((el, index) => {
+      el.textContent = translations[lang][`faq${index + 1}Ans`];
+    });
 
-    document.querySelector(".fAbout").textContent = translations[lang].aboutF
-    document.querySelector(".fBrands").textContent = translations[lang].brandsF
-    document.querySelector(".fProducts").textContent = translations[lang].productsF
-    document.querySelector(".second_content_footer p:nth-child(2)").textContent = translations[lang].rightsF
+    document.querySelectorAll(".fAbout").forEach(el => el.textContent = translations[lang].aboutF);
+    document.querySelectorAll(".fBrands").forEach(el => el.textContent = translations[lang].brandsF);
+    document.querySelectorAll(".fProducts").forEach(el => el.textContent = translations[lang].productsF);
+    document.querySelectorAll(".second_content_footer p:nth-child(2)").forEach(el => el.textContent = translations[lang].rightsF);
 
-    document.getElementById("ru_translate").classList.remove("active")
-    document.getElementById("en_translate").classList.remove("active")
-
-    document.getElementById(lang + "_translate").classList.add("active")
+    document.querySelectorAll(".lang").forEach(el => el.classList.remove("active"));
+    document.querySelectorAll(`#${lang}_translate`).forEach(el => el.classList.add("active"));
   }
 
-  setLanguage("ru")
+  document.querySelectorAll(".lang").forEach(button => {
+    button.addEventListener("click", () => {
+      const lang = button.id.includes("ru") ? "ru" : "en"
+      setLanguage(lang)
+    })
+  })
 
-  document.getElementById("ru_translate").addEventListener("click", () => setLanguage("ru"))
-  document.getElementById("en_translate").addEventListener("click", () => setLanguage("en"))
+  setLanguage("ru")
 })
