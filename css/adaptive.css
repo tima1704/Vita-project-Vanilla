@@ -3,7 +3,7 @@
   |
   |
   | PC screen width: 1400px.
-  | Mobile screen width: 500px.
+  | Mobile screen width: 450px.
  */
 
 @media (max-width: 1400px) {
@@ -290,14 +290,17 @@
 
   .burger-menu {
     display: block;
+    color: white;
   }
 
   .menu-container {
     padding: 20px;
+    background: rgb(66, 146, 66);
   }
 
   .close_menu {
     font-size: 30px;
+    color: white;
     background: none;
     border: none;
     cursor: pointer;
@@ -321,7 +324,7 @@
   .menu-container ul {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
   }
 
   .menu-container li {
@@ -329,7 +332,7 @@
   }
 
   .menu-container a {
-    color: black;
+    color: white;
   }
 
   .head_langs_menu {
@@ -356,7 +359,11 @@
   }
 
   .btn_contact {
-    margin-top: 40px;
+    margin-top: 110px;
+  }
+
+  .btn_contact button {
+    width: 100%;
   }
 }
 
@@ -851,6 +858,48 @@
 
 @media (max-width: 450px) {
 
+  .menu_logo {
+    width: 100px;
+    height: 40px;
+  }
+
+  .close_menu {
+    font-size: 25px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .menu-container li {
+    font-size: 20px;
+  }
+
+  .head_langs_menu {
+    gap: 13px;
+  }
+
+  .head_langs_menu h1 {
+    font-size: 15px !important;
+  }
+
+  .menu_phoneNumber {
+    margin-top: 30px;
+  }
+
+  .head_phoneNumber p {
+    font-size: 13px;
+  }
+
+  .head_phoneNumber h3 {
+    font-size: 15px;
+    color: rgb(73, 129, 65);
+  }
+
+  .btn_contact {
+    margin-top: 150px;
+  }
+
   header {
     padding: 10px 10px;
   }
@@ -862,6 +911,7 @@
 
   .burger-menu {
     display: block;
+    color: white;
     font-size: 20px;
   }
 

@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
       cooperation: "Сотрудничество",
       brands: "Бренды",
       about: "О нас",
-      contacts: "Контакты",
       callCenter: "Наш кол центр:",
       contactUs: "Связаться с нами",
       homeHeader: "Оптовые поставки БАДов и спортивного питания напрямую от заводов-производителей из Европы из США",
@@ -30,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       faq2Ans: "Мы принимаем оплату картами Visa, MasterCard, а также через электронные кошельки.",
       faq3: "Сколько времени занимает доставка?",
       faq3Ans: "Доставка занимает от 3 до 7 рабочих дней в зависимости от вашего региона.",
-      marqueeT: "Поступление NOW Foods более 230+ SKU 🔥 в наличии на нашем складе в Оше.",
+      marqueeT: "#1 в городе магазин витаминов и бадов с широким ассортиментом и качественной продукцией",
       ourTxone: "Преодолейте высокую конкуренцию и увеличьте свои продажи с минимальными затратами!",
       ourTtwo: "Мы предоставляем продукцию известных брендов, которая не требует больших затрат на продвижение. Это позволяет вам быстро занять новые рыночные ниши.",
       ourTxThree: "Поддержка опытного партнера поможет управлять продажами на нескольких площадках, снижая риски ошибок",
@@ -48,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
       cooperation: "Cooperation",
       brands: "Brands",
       about: "About us",
-      contacts: "Contacts",
       callCenter: "Our call center:",
       contactUs: "Contact us",
       homeHeader: "Wholesale supply of dietary supplements and sports nutrition directly from manufacturers in Europe and the USA",
@@ -75,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       faq2Ans: "We accept payments via Visa, MasterCard, as well as through e-wallets.",
       faq3: "How long does shipping take?",
       faq3Ans: "Shipping takes 3 to 7 business days depending on your region.",
-      marqueeT: "NOW Foods has received more than 230+ SKUs 🔥 in stock at our warehouse in Osh.",
+      marqueeT: "#1 store of vitamins and dietary supplements in the city with a wide range and quality products",
       ourTxone: "Overcome high competition and increase your sales at minimal cost!",
       ourTtwo: "We provide products from well-known brands that do not require large promotional costs. This allows you to quickly occupy new market niches.",
       ourTxThree: "Support from an experienced partner will help manage sales on multiple sites, reducing the risk of errors",
@@ -94,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("ul li:nth-child(1) a").textContent = translations[lang].cooperation
     document.querySelector("ul li:nth-child(2) a").textContent = translations[lang].brands
     document.querySelector("ul li:nth-child(3) a").textContent = translations[lang].about
-    document.querySelector("ul li:nth-child(4) a").textContent = translations[lang].contacts
     document.querySelector(".head_phoneNumber p").textContent = translations[lang].callCenter
     document.querySelector(".head_contacts").textContent = translations[lang].contactUs
 
