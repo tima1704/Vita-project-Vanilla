@@ -128,6 +128,10 @@
     width: 70%;
     margin-bottom: 8px
   }
+  
+  .slider_container h1 {
+    font-size: 22px;
+  }
 
   .title_block p {
     font-size: 15px;
@@ -461,6 +465,10 @@
   .left_content1 h1 {
     font-size: 20px;
     margin-bottom: 5px;
+  }
+
+  .slider_container h1 {
+    font-size: 20px;
   }
 
   .left_content1 div {
@@ -822,6 +830,10 @@
   .faq-container h1 {
     font-size: 15px;
     margin-bottom: 10px;
+  }
+
+  .slider_container h1 {
+    font-size: 15px;
   }
 
   .faq-item {
@@ -1330,6 +1342,10 @@
   .left_content1 h1 {
     font-size: 11.5px;
     margin-bottom: 5px;
+  }
+
+  .slider_container h1 {
+    font-size: 11.5px;
   }
 
   .left_content1 div {
