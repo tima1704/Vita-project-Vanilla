@@ -406,6 +406,12 @@
     font-weight: 500;
   }
 
+  .content_2 img {
+    width: 300px;
+    margin: 0 20px;
+    margin-top: 50px;
+  }
+
   .marquee {
     padding: 5px 0;
   }
@@ -588,6 +594,12 @@
 }
 
 @media (max-width: 550px) {
+
+  .content_2 img {
+    width: 250px;
+    margin: 0 20px;
+    margin-top: 50px;
+  }
 
   header {
     padding: 10px 15px ;
@@ -857,6 +869,18 @@
 }
 
 @media (max-width: 450px) {
+
+  .content_2 img {
+    width: 240px;
+    margin: 0 20px;
+    margin-top: 50px;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 35vh;
+    border-radius: 7px;
+  }  
 
   .menu_logo {
     width: 100px;
@@ -1171,9 +1195,20 @@
   .second_content_footer p {
     font-size: 8px;
   }
+
+  .instagram_icon {
+    width: 17px !important;
+    height: 17px !important;
+  }
 }
 
 @media (max-width: 340px) {
+
+  .content_2 img {
+    width: 200px;
+    margin: 0 20px;
+    margin-top: 50px;
+  }
 
   .main_container_one h1 {
     font-size: 15px;
@@ -1403,5 +1438,10 @@
 
   .second_content_footer p {
     font-size: 6px;
+  }
+
+  .first_content_footer .instagram_icon {
+    width: 13px !important;
+    height: 13px !important;
   }
 }

@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ourBrands: "Наши бренды-партнеры:",
       brandsF: "Бренды",
       productsF: "Продукты",
-      cooperationF: "2025 ©",
       rightsF: "Все права защишены."
     },
     en: {
@@ -83,7 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
       aboutF: "About Us",
       brandsF: "Brands",
       productsF: "Products",
-      cooperationF: "2025 ©",
       rightsF: "All rights reserved.",
     },
   }
@@ -149,7 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".fAbout").textContent = translations[lang].aboutF
     document.querySelector(".fBrands").textContent = translations[lang].brandsF
     document.querySelector(".fProducts").textContent = translations[lang].productsF
-    document.querySelector(".second_content_footer p:nth-child(1)").textContent = translations[lang].cooperationF
     document.querySelector(".second_content_footer p:nth-child(2)").textContent = translations[lang].rightsF
 
     document.getElementById("ru_translate").classList.remove("active")
