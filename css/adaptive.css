@@ -292,6 +292,10 @@
     display: none !important;
   }
 
+  .left_head_container ul {
+    display: none;
+  }
+
   .burger-menu {
     display: block;
     color: white;
@@ -602,6 +606,24 @@
 }
 
 @media (max-width: 550px) {
+
+  .swiper-button-next::after {
+    font-size: 25px !important;
+  }
+  
+  .swiper-button-prev::after {
+    font-size: 25px !important;
+  }
+
+  .container {
+    margin-top: 60px;
+  }
+
+  .head_contacts {
+    padding: 13px 15px;
+    font-size: 10px;
+    border-radius: 7px;
+  }
 
   .menu-container .head_langs {
     margin-top: 20px !important;
