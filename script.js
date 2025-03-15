@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const translations = {
     ru: {
+      vitalogo: "./assets/logotype.png",
+      vitalight: "./assets/whiteLogo.png",
+      vitaBackgroundimage: "../assets/market1.jpg",
       cooperation: "Сотрудничество",
       brands: "Бренды",
       about: "О нас",
@@ -13,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
       guarantee3: "Широкий ассортимент",
       guarantee4: "удобные условия покупки",
       brandsHeader: "В нашем магазине ВитаМаркет вы найдете более 20 ведущих мировых брендов витаминов, бадов и спортивного питания.",
-      productsHeader: "Наши продукты",
       aboutUsHeader: "Наши преимущества",
       step1: "Доставка",
       step1Desc: "Доставка по всему миру",
@@ -37,16 +39,18 @@ document.addEventListener("DOMContentLoaded", () => {
       ourTxone: "Мы предлагаем профессиональные консультации с квалифицированными специалистами, которые могут помочь подобрать необходимые добавки с учетом индивидуальных потребностей и здоровья клиента",
       ourTtwo: "Мы работаем  только с проверенными производителями и можем предложить качественные и сертифицированные продукты.",
       ourTxThree: "Мы работаем как в традиционном формате, так и онлайн, что делает процесс покупки более удобным и доступным.",
-      ourTxFor: "Мы следим за последними исследованиями в области здоровья и нутриционистики и предлагаем новинки, соответствующие современным трендам.", 
+      ourTxFor: "Мы следим за последними исследованиями в области здоровья и нутриционистики и предлагаем новинки, соответствующие современным трендам.",
       aboutUs2Title: "Выбирайте нас - здоровье в каждой капсуле!",
       reapeatFAQtitle: "Часто задаваемые вопросы",
       aboutF: "О нас",
-      ourBrands: "Наши бренды-партнеры:",
       brandsF: "Бренды",
       productsF: "Продукты",
       rightsF: "Все права защишены."
     },
     en: {
+      vitalogo: "./assets/vita-eng.svg",
+      vitalight: "./assets/vitaenglight.svg",
+      vitaBackgroundimage: "../assets/vitaengbackground.svg",
       cooperation: "Cooperation",
       brands: "Brands",
       about: "About us",
@@ -57,10 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
       guarantee1: "100% originality guarantee",
       guarantee2: "Professional recommendations, analysis review, and personalized selection of vitamin supplements  ",
       guarantee3: "Wide range of products",
-      ourBrands: "Our partner brands:",
       guarantee4: "Convenient purchase conditions",
       brandsHeader: "In VitaMarket you will find more than 20 of the world's leading brands of vitamins, dietary supplements and sports nutrition.",
-      productsHeader: "Our products",
       aboutUsHeader: "Our advantages",
       step1: "Shipping",
       step1Desc: "Worldwide shipping",
@@ -95,55 +97,68 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function setLanguage(lang) {
-    document.querySelectorAll("ul li:nth-child(1) a").forEach(el => el.textContent = translations[lang].cooperation);
-    document.querySelectorAll("ul li:nth-child(2) a").forEach(el => el.textContent = translations[lang].brands);
-    document.querySelectorAll("ul li:nth-child(3) a").forEach(el => el.textContent = translations[lang].about);
-    document.querySelectorAll(".head_phoneNumber p").forEach(el => el.textContent = translations[lang].callCenter);
-    document.querySelectorAll(".head_contacts").forEach(el => el.textContent = translations[lang].contactUs);
+    document.querySelectorAll(".content_2 img").forEach(el => el.src = translations[lang].vitalogo)
+    document.querySelectorAll(".menu_logo").forEach(el => el.src = translations[lang].vitalight)
+    document.querySelectorAll(".head_logotype").forEach(el => el.src = translations[lang].vitalight)
+    document.querySelectorAll(".logoFoter").forEach(el => el.src = translations[lang].vitalogo)
+    
+    document.querySelectorAll(".right_content1").forEach(el => {
+      el.style.backgroundImage = `url(${translations[lang].vitaBackgroundimage})`
+    })
 
-    document.querySelectorAll(".main_container_one h1").forEach(el => el.textContent = translations[lang].homeHeader);
-    document.querySelectorAll(".main_container_one p").forEach(el => el.textContent = translations[lang].homeSubHeader);
+    document.querySelectorAll(".right_content2").forEach(el => {
+      el.style.backgroundImage = `url(${translations[lang].vitaBackgroundimage})`
+    })
 
-    document.querySelectorAll(".marquee span").forEach(span => span.textContent = translations[lang].marqueeT);
+    document.querySelectorAll("ul li:nth-child(1) a").forEach(el => el.textContent = translations[lang].cooperation)
+    document.querySelectorAll("ul li:nth-child(2) a").forEach(el => el.textContent = translations[lang].brands)
+    document.querySelectorAll("ul li:nth-child(3) a").forEach(el => el.textContent = translations[lang].about)
+    document.querySelectorAll(".head_phoneNumber p").forEach(el => el.textContent = translations[lang].callCenter)
+    document.querySelectorAll(".head_contacts").forEach(el => el.textContent = translations[lang].contactUs)
+
+    document.querySelectorAll(".main_container_one h1").forEach(el => el.textContent = translations[lang].homeHeader)
+    document.querySelectorAll(".main_container_one p").forEach(el => el.textContent = translations[lang].homeSubHeader)
+
+    document.querySelectorAll(".marquee span").forEach(span => span.textContent = translations[lang].marqueeT)
 
     document.querySelectorAll(".main_bottom_content div h3").forEach((el, index) => {
-      el.textContent = translations[lang][`guarantee${index + 1}`];
-    });
+      el.textContent = translations[lang][`guarantee${index + 1}`]
+    })
 
-    document.querySelectorAll(".title_block h1").forEach(el => el.textContent = translations[lang].brandsHeader);
-    document.querySelectorAll(".ourBrandsTitle").forEach(el => el.textContent = translations[lang].ourBrands);
+    document.querySelectorAll(".title_block h1").forEach(el => el.textContent = translations[lang].brandsHeader)
+    document.querySelectorAll(".ourBrandsTitle").forEach(el => el.textContent = translations[lang].ourBrands)
 
-    document.querySelectorAll(".slider_container h1").forEach(el => el.textContent = translations[lang].productsHeader);
-    document.querySelectorAll(".about_us_content1 h1").forEach(el => el.textContent = translations[lang].aboutUsHeader);
+    document.querySelectorAll(".slider_container h1").forEach(el => el.textContent = translations[lang].productsHeader)
+    document.querySelectorAll(".about_us_content1 h1").forEach(el => el.textContent = translations[lang].aboutUsHeader)
 
-    document.querySelectorAll(".ab_box_1 p").forEach(el => el.textContent = translations[lang].ourTxone);
-    document.querySelectorAll(".ab_box_2 p").forEach(el => el.textContent = translations[lang].ourTtwo);
-    document.querySelectorAll(".ab_box_3 p").forEach(el => el.textContent = translations[lang].ourTxThree);
-    document.querySelectorAll(".ab_box_4 p").forEach(el => el.textContent = translations[lang].ourTxFor);
+    document.querySelectorAll(".ab_box_1 p").forEach(el => el.textContent = translations[lang].ourTxone)
+    document.querySelectorAll(".ab_box_2 p").forEach(el => el.textContent = translations[lang].ourTtwo)
+    document.querySelectorAll(".ab_box_3 p").forEach(el => el.textContent = translations[lang].ourTxThree)
+    document.querySelectorAll(".ab_box_4 p").forEach(el => el.textContent = translations[lang].ourTxFor)
 
-    document.querySelectorAll(".left_content2 h1").forEach(el => el.textContent = translations[lang].aboutUs2Title);
+    document.querySelectorAll(".left_content2 h1").forEach(el => el.textContent = translations[lang].aboutUs2Title)
 
     document.querySelectorAll(".step_work_container div h3").forEach((el, index) => {
-      el.textContent = translations[lang][`step${index + 1}`];
-    });
-    
-    document.querySelectorAll(".step_work_container div p").forEach((el, index) => {
-      el.textContent = translations[lang][`step${index + 1}Desc`];
-    });
-    
+      el.textContent = translations[lang][`step${index + 1}`]
+    })
 
-    document.querySelectorAll(".text-center").forEach(el => el.textContent = translations[lang].reapeatFAQtitle);
+    document.querySelectorAll(".step_work_container div p").forEach((el, index) => {
+      el.textContent = translations[lang][`step${index + 1}Desc`]
+    })
+
+
+    document.querySelectorAll(".text-center").forEach(el => el.textContent = translations[lang].reapeatFAQtitle)
     document.querySelectorAll(".faq-item .faq-question h1").forEach((el, index) => {
-      el.textContent = translations[lang][`faq${index + 1}`];
-    });
+      el.textContent = translations[lang][`faq${index + 1}`]
+    })
     document.querySelectorAll(".faq-item .faq-answer p").forEach((el, index) => {
-      el.textContent = translations[lang][`faq${index + 1}Ans`];
-    });
+      el.textContent = translations[lang][`faq${index + 1}Ans`]
+    })
 
     document.querySelectorAll(".fAbout").forEach(el => el.textContent = translations[lang].aboutF);
-    document.querySelectorAll(".fBrands").forEach(el => el.textContent = translations[lang].brandsF);
-    document.querySelectorAll(".fProducts").forEach(el => el.textContent = translations[lang].productsF);
-    document.querySelectorAll(".second_content_footer p:nth-child(2)").forEach(el => el.textContent = translations[lang].rightsF);
+    document.querySelectorAll(".fBrands").forEach(el => el.textContent = translations[lang].brandsF)
+    document.querySelectorAll(".fProducts").forEach(el => el.textContent = translations[lang].productsF)
+    document.querySelectorAll(".second_content_footer p:nth-child(2)").forEach(el => el.textContent = translations[lang].rightsF)
 
     document.querySelectorAll(".lang").forEach(el => el.classList.remove("active"));
     document.querySelectorAll(`#${lang}_translate`).forEach(el => el.classList.add("active"));

@@ -229,8 +229,9 @@ header a {
 }
 
 .content_2 img {
-  width: 500px;
+  width: 480px;
   margin: 0 20px;
+  object-fit: cover !important;
 }
 
 @keyframes floatAnimation {
